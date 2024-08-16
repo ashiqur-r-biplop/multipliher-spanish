@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering Monthly Wealth</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-calculate">
+            <div class="calculation-topbar">
+                <h1 class="calculate-title">Dominando la riqueza mensual</h1>
+                <div class="calculate-topbar-imgbox"><img src="./img/logo.png" alt=""></div>
+            </div>
+            <div class="drop-down-box">
+                <div class="month-drop-down-box">
+                    <label for="month">Mes:</label>
+                    <select name="month" id="">
+                        <option value="Enero">Enero</option>
+                        <option value="Febrero">Febrero</option>
+                        <option value="Marzo">Marzo</option>
+                        <option value="Abril">Abril</option>
+                        <option value="Puede">Puede</option>
+                        <option value="Junio">Junio</option>
+                        <option value="Julio">Julio</option>
+                        <option value="Agosto">Agosto</option>
+                        <option value="Septiembre">Septiembre</option>
+                        <option value="Octubre">Octubre</option>
+                        <option value="Noviembre">Noviembre</option>
+                        <option value="Diciembre">Diciembre</option>
+                    </select>
+                </div>
+                <div class="year-drop-down-box">
+                    <label for="Year">Año:</label>
+                    <select name="Year" id="">
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        <option value="2031">2031</option>
+                        <option value="2032">2032</option>
+                        <option value="2033">2033</option>
+                        <option value="2034">2034</option>
+                        <option value="2035">2035</option>
+                        <option value="2036">2036</option>
+                        <option value="2037">2037</option>
+                        <option value="2038">2038</option>
+                        <option value="2039">2039</option>
+                        <option value="2040">2040</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form">
+                <div class="income-tithes-savings">
+                    <div class="">
+                        <div class="input-box">
+                            <span class="">Ingresos mensuales</span>
+                            <div class="input-and-dollar-box">
+                                <span class="dollar-icon">$</span>
+                                <input autocomplete="off" oninput="calculateAmountForBills()" id="Monthly_Income"
+                                    type="text">
+                            </div>
+                        </div>
+
+                        <div class="Tithes input-box">
+                            <span class="cost-title">Diezmos (10% de los ingresos) </span>
+                            <div class="input-and-dollar-box">
+                                <span class="amount">
+                                    <span class="dollar-icon">$</span> <span id="Tithes_amount"></span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="Tithes input-box">
+                            <span class="cost-title">Ahorro (10% de los ingresos) </span>
+                            <div class="input-and-dollar-box">
+                                <span class="amount">
+                                    <span class="dollar-icon">$</span> <span id="Savings_amount"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="Savings input-total">
+                            <span class="cost-title">Net Amount for Bills & Other Expenses</span>
+                            <div class="input-and-dollar-box">
+                                <span class="amount">
+                                    <span class="dollar-icon">$</span>
+                                    <span id="netAmountForBills"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-col">
+                    <div class="Fixed-Expenses-col">
+                        <h2 class="Fixed-Expenses-title">Fixed Expenses</h2>
+
+                        <div class="Fixed-expenses">
+                            <div class="expenses-input-box">
+                                <p class="">Mortgage</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="mortgage" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Car Note</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="carNote" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Insurance</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="insurance" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Credit Card</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="creditCard" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Internet</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="internet" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Cable</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="cable" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Cell Phone</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="cellPhone" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Security System</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="securitySystem" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Electric</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="electric" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Water</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="water" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Other Utilies</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="otherUtilies" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Child Care/ Tuition</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="childCareTuition" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Student Loans</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="studentLoans" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Other Loans</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="otherLoans" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">House Keeper</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="houseKeeper" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Lawn Care</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="lawnCare" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <div class="expenses-input-box">
+                                <p class="">Other monthly fixed expenses</p>
+                                <div class="input-and-dollar-box">
+                                    <span class="dollar-icon">$</span>
+                                    <input id="monthlyFixedExpenses" autocomplete="off" class="numberInput" type="text">
+                                </div>
+                            </div>
+                            <hr>
+                            <p class="Savings input-total">
+                                <span class="cost-title">Total Monthly Fixed Expenses <br>
+
+                                </span>
+                                <span class="amount"><span class="dollar-icon">$</span><span id="totalExpenses"></span>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Variable-Expenses-col">
+                        <div class="Variable-Expenses-col-1">
+                            <h2 class="Fixed-Expenses-title">Variable Expenses</h2>
+
+                            <div class="Fixed-expenses">
+                                <div class="expenses-input-box">
+                                    <p class="">Groceries</p>
+                                    <div class="input-and-dollar-box">
+                                        <span class="dollar-icon">$</span>
+                                        <input id="" autocomplete="off" class="VariableExpenses" type="text">
+                                    </div>
+                                </div>
+                                <div class="expenses-input-box">
+                                    <p class="">Gas/Fuel</p>
+                                    <div class="input-and-dollar-box">
+                                        <span class="dollar-icon">$</span>
+                                        <input id="" autocomplete="off" class="VariableExpenses" type="text">
+                                    </div>
+                                </div>
+                                <div class="expenses-input-box">
+                                    <p class="">Self Care (hair, nails, etc.)</p>
+                                    <div class="input-and-dollar-box">
+                                        <span class="dollar-icon">$</span>
+                                        <input id="" autocomplete="off" class="VariableExpenses" type="text">
+                                    </div>
+                                </div>
+                                <div class="expenses-input-box">
+                                    <p class="">Kids Sports/ Activities </p>
+                                    <div class="input-and-dollar-box">
+                                        <span class="dollar-icon">$</span>
+                                        <input id="" autocomplete="off" class="VariableExpenses" type="text">
+                                    </div>
+                                </div>
+                                <div class="expenses-input-box">
+                                    <p class="">Dry Cleaners</p>
+                                    <div class="input-and-dollar-box">
+                                        <span class="dollar-icon">$</span>
+                                        <input id="" autocomplete="off" class="VariableExpenses" type="text">
+                                    </div>
+                                </div>
+                                <div class="expenses-input-box">
+                                    <p class="">Other</p>
+                                    <div class="input-and-dollar-box">
+                                        <span class="dollar-icon">$</span>
+                                        <input id="" autocomplete="off" class="VariableExpenses" type="text">
+                                    </div>
+                                </div>
+                                <hr>
+                                <p class="Savings input-total">
+                                    <span class="cost-title">Total Monthly Variable <br>
+                                        Expenses
+                                    </span>
+                                    <span class="amount"><span class="dollar-icon">$</span><span
+                                            id="totalVariableExpenses"></span>
+                                    </span>
+                                </p>
+                            </div>
+                            <!-- Net Monthly Wealth after All expenses -->
+                            <div class="NetMonthlyWealth">
+                                <div class="">
+                                    <p class="Tithes input-box">
+                                        <span class="cost-title">Net Income</span>
+                                        <span class="amount">
+                                            <span class="dollar-icon">$</span> <span id="netAmountForBill"></span>
+                                        </span>
+                                    </p>
+                                    <p class="Tithes input-box">
+                                        <span class="cost-title">Fixed Expenses</span>
+                                        <span class="amount">
+                                            <span class="dollar-icon">$</span> <span id="fixedExpensesWealth"></span>
+                                        </span>
+                                    </p>
+                                    <p class="Tithes input-box">
+                                        <span class="cost-title">
+                                            Variable Expenses
+                                        </span>
+                                        <span class="amount">
+                                            <span class="dollar-icon">$</span> <span id="variableExpensesWealth"></span>
+                                        </span>
+                                    </p>
+                                    <hr>
+                                    <p class="Savings input-total" id="NetMonthlyWealthDaynamicColor">
+                                        <span class="cost-title">Net Monthly Wealth <br> after
+                                            All expenses <br>
+
+                                        </span>
+                                        <span class="amount"><span class="dollar-icon">$</span><span
+                                                id="NetMonthlyWealth"></span>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="usingYourIncome">
+                                <p>Did you add to your net
+                                    worth this month using
+                                    your income?</p>
+                                <select name="" id="">
+                                    <option value="YES">YES</option>
+                                    <option value="NO">NO</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html> 
