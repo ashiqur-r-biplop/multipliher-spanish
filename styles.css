@@ -1,412 +1,638 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 .container {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .container-calculate {
-    max-width: 1200px;
-    margin: 0px auto;
-    padding: 20px 0px;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 20px 0px;
 }
 
 .calculation-topbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 0px 20px;
-    border-radius: 5px;
-    text-align: center;
-
-    font-family: "Inter Tight", sans-serif;
-    font-weight: 600;
-    font-size: 30px;
-    color: #ff06b7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 0px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #ff06b7;
 }
 
 
 .calculate-topbar-imgbox img {
-    width: 300px;
-    height: 250px;
-    object-fit: contain;
+  width: 300px;
+  height: 250px;
+  object-fit: contain;
 }
 
+.partnering {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
 
-.income-tithes-savings {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.partnering img {
+  width: 150px;
+}
+
+.income-tithes-savings,
+.reset-button {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reset-button {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.reset-button button {
+  background-color: green;
+  border: none;
+  color: white;
+  font-family: serif;
+  padding: 15px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .input-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-    font-family: serif;
-    margin: 0px;
-    background-color: #E4DCD1;
-    border-bottom: 1px solid #B1862F;
-    color: #000000;
-    font-family: "Playfair Display", serif;
-    font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  font-family: serif;
+  margin: 0px;
+  background-color: #e4dcd1;
+  border-bottom: 1px solid #b1862f;
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+}
+
+.CreditScareBox {
+  display: flex;
+  align-items: center;
+}
+
+.CreditScare {
+  font-size: 24px;
+  gap: 20px;
+}
+
+.CreditScare input {
+  width: 140px;
+  height: 50px;
+  outline: none;
+  padding: 0px 10px;
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  border: 2px transparent;
+  border-radius: 10px 0px;
+  text-align: end;
+  border: 2px solid #b1862f;
+}
+
+.CreditScare input:focus {
+  border: 2px solid #ff06b7;
+  color: #ff06b7;
 }
 
 .input-box input {
-    width: 200px;
-    height: 60px;
-    outline: none;
-    padding: 0px 10px;
-    color: #000000;
-    font-family: "Playfair Display", serif;
-    font-size: 24px;
-    border: 2px transparent;
-    border-radius: 10px 0px;
-    text-align: end;
+  width: 200px;
+  height: 60px;
+  outline: none;
+  padding: 0px 10px;
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  border: 2px transparent;
+  border-radius: 10px 0px;
+  text-align: end;
 }
 
-
 .input-box input:focus {
-    border: 2px solid #B1862F;
+  border: 2px solid #b1862f;
 }
 
 hr {
-    margin: 0px !important;
-    border: 2px solid #B1862F;
+  margin: 0px !important;
+  border: 2px solid #b1862f;
 }
 
 .input-total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #ff06b7;
-    padding: 20px 30px;
-    color: #000;
-    ;
-    font-family: "Playfair Display", serif;
-    font-weight: 600;
-    font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff06b7;
+  padding: 20px 30px;
+  color: #000;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 24px;
 }
 
 .dollar-icon {
-    margin: 0px 5px;
+  margin: 0px 5px;
+  font-size: 22px !important;
 }
 
 .grid-col {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .Fixed-Expenses-col {
-    grid-column: 1 / 8;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  grid-column: 1 / 8;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .Variable-Expenses-col {
-    grid-column: 8/ 13;
-
+  grid-column: 8/ 13;
 }
 
 .Variable-Expenses-col-1 {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.TotalSavings {
+  margin-top: 20px !important;
 }
 
 .Fixed-expenses {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .expenses-input-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #E4DCD1;
-    border-bottom: 1px solid #B1862F;
-    padding: 30px 20px 30px 20px;
-    font-family: "Playfair Display", serif;
-    font-size: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e4dcd1;
+  border-bottom: 1px solid #b1862f;
+  padding: 30px 20px 30px 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  position: relative;
+}
+
+
+.craditBlance {
+  position: absolute;
+  width: 100%;
+  bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.craditBlance p {
+  font-size: 16px;
+}
+
+.craditBlance .dollar-icon {
+  font-size: 16px !important;
+  margin-left: 20px;
+}
+
+.craditBlance input {
+  position: absolute;
+  width: 120px !important;
+  height: auto !important;
+  border-radius: 5px 0px !important;
+  font-size: 16px !important;
+  padding: 6px !important;
+
+}
+
+.craditBlance input:focus {
+  border: 2px solid #b1862f !important;
 }
 
 .expenses-input-box input {
-    width: 200px;
-    height: 60px;
-    outline: none;
-    padding: 0px 10px;
-    color: #000000;
-    font-family: "Playfair Display", serif;
-    font-size: 24px;
-    border: 2px transparent;
-    border-radius: 10px 0px;
-    text-align: end;
+  width: 200px;
+  height: 60px;
+  outline: none;
+  padding: 0px 10px;
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  border: 2px transparent;
+  border-radius: 10px 0px;
+  text-align: end;
 }
 
 .expenses-input-box input:focus {
-    border: 2px solid #B1862F;
+  border: 2px solid #b1862f;
 }
 
 .drop-down-box {
-    display: flex;
-    justify-content: end;
-    align-items: start;
-    gap: 10px;
-    margin: 20px 0px;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  gap: 10px;
+  margin: 20px 0px;
 }
 
 .drop-down-box .month-drop-down-box select,
 .drop-down-box .year-drop-down-box select {
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    background-color: #ff06b7;
-    color: #e4dcd1;
-    cursor: pointer;
-    font-family: "Playfair Display", serif;
-    font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background-color: #ff06b7;
+  color: #e4dcd1;
+  cursor: pointer;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
 }
 
 .drop-down-box .month-drop-down-box label,
 .drop-down-box .year-drop-down-box label {
-    font-weight: bold;
-    color: #000;
-    font-size: 24px;
-    font-family: "Playfair Display", serif;
+  font-weight: bold;
+  color: #000;
+  font-size: 24px;
+  font-family: "Playfair Display", serif;
 }
 
 .usingYourIncome {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
 }
 
 .usingYourIncome p {
-    font-family: "Playfair Display", serif;
-    font-size: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
 }
 
 .usingYourIncome select {
-    padding: 5px 10px;
-    outline: none;
-    border: none;
-    background-color: #c7c7c742;
-    cursor: pointer;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  background-color: #c7c7c742;
+  cursor: pointer;
+}
+
+.amount {
+  display: flex;
+  align-items: center;
 }
 
 .Fixed-Expenses-title {
-    font-size: 42px;
-    font-family: "Inter Tight", sans-serif;
-    font-weight: 600;
-    color: #ff06b7;
-    padding: 20px 0px;
+  font-size: 42px;
+  font-family: "Inter Tight", sans-serif;
+  font-weight: 600;
+  color: #ff06b7;
+  padding: 20px 0px;
 }
 
-
-
 .usingYourIncome select {
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    background-color: #ff06b7;
-    color: #e4dcd1;
-    cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background-color: #ff06b7;
+  color: #e4dcd1;
+  cursor: pointer;
 }
 
 .input-and-dollar-box {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .NetMonthlyWealth {
-    margin-top: 20px;
+  margin-top: 20px;
+}
+
+.dropBox-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* responsive design (min-width: 840px) and (max-width: 1150px) */
 @media screen and (min-width: 840px) and (max-width: 1150px) {
-    .calculate-topbar-imgbox img {
-        width: 250px;
-    }
+  .calculate-topbar-imgbox img {
+    width: 250px;
+  }
 
-    .container-calculate {
-        margin: 0px 10px;
-    }
+  .partnering img {
+    width: 50px;
+  }
+  .craditBlance {
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    
+  }
 
-    .calculation-topbar {
-        font-size: 24px;
-    }
+  .craditBlance p {
+    font-size: 12px !important;
+    margin-top: 25px;
+    margin-right: 5px;
+  }
 
-    .income-tithes-savings {
-        padding: 30px;
-    }
+  .craditBlance .dollar-icon {
+    font-size: 12px !important;
+    margin: 0px !important;
+    display: none;
+  }
 
-    .grid-col {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        margin-top: 20px;
-    }
+  .dropBox-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+  }
 
-    .Fixed-Expenses-col {
-        padding: 30px;
-    }
+  .container-calculate {
+    margin: 0px 10px;
+  }
 
-    .Variable-Expenses-col-1 {
-        padding: 30px;
-    }
+  .calculation-topbar {
+    font-size: 24px;
+  }
 
-    .expenses-input-box input:focus {
-        border: 2px solid #B1862F;
-    }
+  .income-tithes-savings {
+    padding: 30px;
+  }
 
+  .grid-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .Fixed-Expenses-col {
+    padding: 30px;
+  }
+
+  .Variable-Expenses-col-1 {
+    padding: 30px;
+  }
+
+  .expenses-input-box input:focus {
+    border: 2px solid #b1862f;
+  }
 }
 
 /* responsive design (min-width: 600px) and (max-width: 840px) */
 @media screen and (min-width: 600px) and (max-width: 840px) {
-    .calculate-topbar-imgbox img {
-        width: 200px;
-    }
+  .calculate-topbar-imgbox img {
+    width: 200px;
+  }
+  .craditBlance {
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    
+  }
 
-    .container-calculate {
-        margin: 0px 10px;
-    }
+  .craditBlance p {
+    font-size: 12px !important;
+    margin-top: 25px;
+    margin-right: 5px;
+  }
 
-    .calculation-topbar {
-        font-size: 18px;
-    }
+  .craditBlance .dollar-icon {
+    font-size: 12px !important;
+    margin: 0px !important;
+    display: none;
+  }
 
-    .income-tithes-savings {
-        padding: 30px;
-    }
+  .partnering img {
+    width: 50px;
+  }
 
-    .grid-col {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        margin-top: 20px;
-    }
+  .dropBox-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+  }
 
-    .Fixed-Expenses-col {
-        padding: 30px;
-    }
+  .drop-down-box {
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+  }
 
-    .Variable-Expenses-col-1 {
-        padding: 30px;
-    }
+  .container-calculate {
+    margin: 0px 10px;
+  }
 
-    .expenses-input-box input:focus {
-        border: 2px solid #B1862F;
-    }
+  .calculation-topbar {
+    font-size: 2.2vw;
+  }
 
-    .amount {
-        display: flex;
-    }
+  .income-tithes-savings {
+    padding: 30px;
+  }
 
-    .input-box span,
-    .input-total,
-    .expenses-input-box p {
-        font-size: 20px;
-    }
+  .grid-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
 
-    .input-box input,
-    .expenses-input-box input {
-        width: 150px;
-        height: 50px;
-    }
+  .Fixed-Expenses-col {
+    padding: 30px;
+  }
+
+  .Variable-Expenses-col-1 {
+    padding: 30px;
+  }
+
+  .expenses-input-box input:focus {
+    border: 2px solid #b1862f;
+  }
+
+  .amount {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-box span,
+  .input-total,
+  .expenses-input-box p {
+    font-size: 20px;
+  }
+
+  .input-box input,
+  .expenses-input-box input {
+    width: 150px;
+    height: 50px;
+  }
 }
 
 /* responsive design (min-width: 0px) and (max-width: 600px) */
 @media screen and (min-width: 0px) and (max-width: 600px) {
-    .calculation-topbar {
-        padding: 20px;
-    }
+  .calculation-topbar {
+    padding: 20px;
+  }
 
-    .calculate-topbar-imgbox img {
-        width: 200px;
-        height: 180px;
-    }
+  .craditBlance {
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    
+  }
 
-    .container-calculate {
-        margin: 0px 10px;
-    }
+  .craditBlance p {
+    font-size: 12px !important;
+    margin-top: 25px;
+    margin-right: 5px;
+  }
 
-    .drop-down-box {
-        flex-direction: column;
-        justify-content: end;
-        align-items: end;
+  .craditBlance .dollar-icon {
+    font-size: 12px !important;
+    margin: 0px !important;
+    display: none;
+  }
 
-    }
+  .Balance .dollar-icon {
+    margin-top: 20px !important;
+  }
 
-    .calculation-topbar {
-        flex-direction: column-reverse;
-    }
 
-    .calculation-topbar {
-        font-size: 16px;
-    }
 
-    .income-tithes-savings {
-        padding: 30px;
-    }
 
-    .grid-col {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        margin-top: 20px;
-    }
+  .craditBlance input {
+    position: absolute;
+    width: 80px !important;
+    height: auto !important;
+    border-radius: 5px 0px !important;
+    font-size: 12px !important;
+    padding: 6px !important;
 
-    .Fixed-Expenses-col {
-        padding: 30px;
-    }
+  }
 
-    .Variable-Expenses-col-1 {
-        padding: 30px;
-    }
+  .partnering img {
+    width: 50px;
+  }
 
-    .expenses-input-box input:focus {
-        border: 2px solid #B1862F;
-    }
+  .dropBox-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+  }
 
-    .amount {
-        display: flex;
-    }
+  .dollar-icon {
+    margin: 0px 5px;
+    font-size: 14px !important;
+  }
 
-    .input-box span,
-    .input-total,
-    .expenses-input-box p {
-        font-size: 15px;
-    }
+  .calculate-topbar-imgbox img {
+    width: 200px;
+    height: 180px;
+  }
 
-    .input-box input,
-    .expenses-input-box input {
-        width: 100px;
-        height: 50px;
-    }
+  .container-calculate {
+    margin: 0px 10px;
+  }
 
-    .Fixed-Expenses-title {
-        font-size: 26px;
-    }
+  .drop-down-box {
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+  }
 
-    .usingYourIncome p {
-        font-size: 16px;
-    }
+  .calculation-topbar {
+    flex-direction: column-reverse;
+  }
+
+  .calculation-topbar {
+    font-size: 12px;
+  }
+
+  .income-tithes-savings {
+    padding: 30px;
+  }
+
+  .grid-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .Fixed-Expenses-col {
+    padding: 30px;
+  }
+
+  .Variable-Expenses-col-1 {
+    padding: 30px;
+  }
+
+  .expenses-input-box input:focus {
+    border: 2px solid #b1862f;
+  }
+
+  .amount {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-box span,
+  .input-total,
+  .expenses-input-box p {
+    font-size: 15px;
+  }
+
+  .input-box input,
+  .expenses-input-box input {
+    width: 100px;
+    height: 50px;
+  }
+
+  .Fixed-Expenses-title {
+    font-size: 26px;
+  }
+
+  .usingYourIncome p {
+    font-size: 16px;
+  }
 }

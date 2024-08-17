@@ -30,7 +30,7 @@ const monthlyIncome = document.getElementById("Monthly_Income");
 
 const tithesAmount = document.getElementById("Tithes_amount");
 const savingsAmount = document.getElementById("Savings_amount");
-const netAmountForBills = document.getElementById("netAmountForBills");
+const netAmountForBills = document.getElementById("netAmountForBillsAmount");
 const mortgage = document.getElementById("mortgage");
 const carNote = document.getElementById("carNote");
 const insurance = document.getElementById("insurance");
@@ -62,39 +62,28 @@ const dynamicBgTotalNetWorth = document.getElementById(
   "NetMonthlyWealthDaynamicColor"
 );
 const NetMonthlyWealth = document.getElementById("NetMonthlyWealth");
+
+const totalSavings = document.querySelectorAll(".totalSavings");
+const netAmountForBillsOtherExpenses =
+  document.querySelectorAll(".netAmountForBills");
+const totalSavingsAmount = document.getElementById("totalSavingsAmount");
 const calculateAmountForBills = () => {
-  const inputValue = monthlyIncome.value;
-  const tithesIncome = (parseFloat(inputValue.replace(/,/g, "")) / 100) * 10;
-  const savingsAmountPerMonth =
-    (parseFloat(inputValue.replace(/,/g, "")) / 100) * 10;
+  let total = 0;
 
-  const tithesComma = tithesIncome ? tithesIncome.toFixed(2) : 0;
-  const savingComma = savingsAmountPerMonth
-    ? savingsAmountPerMonth?.toFixed(2)
-    : 0;
-  const savingAmountComma = parseFloat(savingComma)
-    .toString()
-    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  savingsAmount.textContent = savingAmountComma;
-
-  const tithesAmountComma = parseFloat(tithesComma)
-    .toString()
-    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  tithesAmount.textContent = tithesAmountComma;
-  const TotalAmount =
-    parseFloat(inputValue.replace(/,/g, "")) -
-    (tithesIncome + savingsAmountPerMonth);
-
-  const netAmountForBillsComma = TotalAmount ? TotalAmount?.toFixed(2) : 0;
-  const monthlyIncomeComma = parseFloat(netAmountForBillsComma)
+  netAmountForBillsOtherExpenses.forEach((input) => {
+    total += parseFloat(input.value.replace(/,/g, "")) || 0;
+  });
+  const totalComma = parseFloat(total)
     .toFixed(2)
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  netAmountForBills.textContent = monthlyIncomeComma;
-
+  netAmountForBills.textContent = totalComma;
   // Set the replaced value back to the input field
 
   calculateNetMonthWealth();
 };
+netAmountForBillsOtherExpenses.forEach((input) => {
+  input.addEventListener("input", calculateAmountForBills);
+});
 function calculateTotal() {
   let total = 0;
 
@@ -150,11 +139,40 @@ function calculateNetMonthWealth() {
     ? (dynamicBgTotalNetWorth.style.backgroundColor = "#ff06b7")
     : (dynamicBgTotalNetWorth.style.backgroundColor = "red");
 }
+// Total Savings
+function calculateTotalSavings() {
+  let total = 0;
+
+  totalSavings.forEach((input) => {
+    total += parseFloat(input.value.replace(/,/g, "")) || 0;
+  });
+  const totalComma = parseFloat(total)
+    .toFixed(2)
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  totalSavingsAmount.textContent = totalComma;
+}
+totalSavings.forEach((input) => {
+  input.addEventListener("input", calculateTotalSavings);
+});
+//  reset function
+
+function resetFunction() {
+  const inputs = document.getElementsByTagName("input");
+  for (let i = 0; i < inputs.length; i++) {
+    inputs[i].value = "";
+  }
+  calculateAmountForBills();
+  calculateTotal();
+  calculateTotalVariableExpenses();
+  calculateNetMonthWealth();
+  calculateTotalSavings();
+}
 
 calculateAmountForBills();
 calculateTotal();
 calculateTotalVariableExpenses();
 calculateNetMonthWealth();
+calculateTotalSavings();
 /*  parseFloat(netAmountWealth) === 0
       ? ExpensesTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
       : total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); */
