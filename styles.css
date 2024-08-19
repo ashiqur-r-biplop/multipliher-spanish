@@ -52,6 +52,29 @@
   width: 150px;
 }
 
+.input-group-anual-cradit {
+  margin-top: 20px;
+  padding: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group-anual-cradit .drop-down-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group-anual-cradit .drop-down-box .month-drop-down-box {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group-anual-cradit .drop-down-box .month-drop-down-box input {
+  width: 100%;
+}
+
 .income-tithes-savings,
 .reset-button {
   background-color: #fff;
@@ -340,7 +363,7 @@ hr {
 
 .dropBox-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
 }
 
@@ -353,13 +376,14 @@ hr {
   .partnering img {
     width: 50px;
   }
+
   .craditBlance {
     position: absolute;
     width: 100%;
     bottom: 15px;
     display: flex;
     align-items: center;
-    
+
   }
 
   .craditBlance p {
@@ -418,13 +442,45 @@ hr {
   .calculate-topbar-imgbox img {
     width: 200px;
   }
+
+
+
+
+  .input-group-anual-cradit {
+    margin-top: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-group-anual-cradit .drop-down-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .input-group-anual-cradit .drop-down-box .month-drop-down-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-group-anual-cradit .drop-down-box .month-drop-down-box label {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  .input-group-anual-cradit .drop-down-box .month-drop-down-box input {
+    width: 100%;
+  }
+
   .craditBlance {
     position: absolute;
     width: 100%;
     bottom: 15px;
     display: flex;
     align-items: center;
-    
+
   }
 
   .craditBlance p {
@@ -503,10 +559,44 @@ hr {
     width: 150px;
     height: 50px;
   }
+
+
+
+
+
+
+  .input-group-anual-cradit {
+    margin-top: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  .input-group-anual-cradit .drop-down-box {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .input-group-anual-cradit .drop-down-box .month-drop-down-box {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-group-anual-cradit .drop-down-box .month-drop-down-box label {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  .input-group-anual-cradit .drop-down-box .month-drop-down-box input {
+    width: 100%;
+  }
 }
 
 /* responsive design (min-width: 0px) and (max-width: 600px) */
 @media screen and (min-width: 0px) and (max-width: 600px) {
+
   .calculation-topbar {
     padding: 20px;
   }
@@ -517,7 +607,7 @@ hr {
     bottom: 15px;
     display: flex;
     align-items: center;
-    
+
   }
 
   .craditBlance p {
@@ -635,4 +725,37 @@ hr {
   .usingYourIncome p {
     font-size: 16px;
   }
+
+
+
+
+
+  .input-group-anual-cradit {
+    margin-top: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-group-anual-cradit .drop-down-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .input-group-anual-cradit .drop-down-box .month-drop-down-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-group-anual-cradit .drop-down-box .month-drop-down-box label {
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  .input-group-anual-cradit .drop-down-box .month-drop-down-box input {
+    width: 100%;
+  }
+
 }
