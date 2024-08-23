@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hearts For Moms organization</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -71,6 +71,45 @@
         <div class="income-tithes-savings">
           <div class="">
             <div class="input-box">
+              <span class="">Ingresos mensuales</span>
+              <div class="input-and-dollar-box">
+                <span class="dollar-icon">$</span>
+                <input autocomplete="off" oninput="calculateAmountForBills()" id="Monthly_Income" type="text">
+              </div>
+            </div>
+
+            <div class="Tithes input-box">
+              <span class="cost-title">Diezmos (10% de los ingresos) </span>
+              <div class="input-and-dollar-box">
+                <span class="amount">
+                  <span class="dollar-icon">$</span> <span id="Tithes_amount"></span>
+                </span>
+              </div>
+            </div>
+
+            <div class="Tithes input-box">
+              <span class="cost-title">Ahorro (10% de los ingresos) </span>
+              <div class="input-and-dollar-box">
+                <span class="amount">
+                  <span class="dollar-icon">$</span> <span id="Savings_amount"></span>
+                </span>
+              </div>
+            </div>
+            <hr>
+            <div class="Savings input-total">
+              <span class="cost-title">Net Amount for Bills & Other Expenses</span>
+              <div class="input-and-dollar-box">
+                <span class="amount">
+                  <span class="dollar-icon">$</span>
+                  <span id="netAmountForBills"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="income-tithes-savings">
+          <div class="">
+            <div class="input-box">
               <span class="">Ingresos mensuales </span>
               <div class="input-and-dollar-box">
                 <span class="dollar-icon">$</span>
@@ -123,7 +162,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="grid-col">
           <div class="Fixed-Expenses-col">
             <h2 class="Fixed-Expenses-title">Gastos fijos</h2>
